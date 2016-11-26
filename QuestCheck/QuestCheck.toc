@@ -1,0 +1,7 @@
+## Interface: 70100
+## Title: QuestCheck
+## Author: Byron Lagrone
+## Notes: Quest completion checker, v0.0.1-SNAPSHOT; Updates at http://byronic.online
+## Version: 0.0.1-SNAPSHOT
+
+QuestCheck.lua
