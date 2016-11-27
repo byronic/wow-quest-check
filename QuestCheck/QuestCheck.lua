@@ -5,10 +5,7 @@ print('\124cff00ffffQuestCheck\124cffc2c2c2 ' .. version .. ' loaded.');
 -- Support for slash commands, which must be passed in a list starting at 1
 SLASH_QUESTCHECK1, SLASH_QUESTCHECK2 = '/questcheck', '/qck';
 function SlashCmdList.QUESTCHECK(msg, editbox)
-  if msg == '' then
-    print('Usage: /questcheck [quest ID number]');
-    print('  COMING SOON: /questcheck [quest name]');
-  else
+  if tonumber(msg) ~= nil then
     arg = tonumber(msg);
     if arg then
       result = IsQuestFlaggedCompleted(arg);
@@ -20,6 +17,9 @@ function SlashCmdList.QUESTCHECK(msg, editbox)
     else
       print("\124cffff0000[QUESTCHECK ERROR] (id=" .. arg .. ") is not a valid quest id.");
     end
+  else
+    print('Usage: /questcheck [quest ID number]');
+    print('  COMING SOON: /questcheck [quest name]');
   end
 end
 
