@@ -2,6 +2,8 @@
 version = GetAddOnMetadata("QuestCheck", "Version");
 print('\124cff00ffffQuestCheck\124cffc2c2c2 ' .. version .. ' loaded.');
 
+-- I added this comment for the purposes of showing off git
+
 -- Support for slash commands, which must be passed in a list starting at 1
 SLASH_QUESTCHECK1, SLASH_QUESTCHECK2 = '/questcheck', '/qck';
 function SlashCmdList.QUESTCHECK(msg, editbox)
